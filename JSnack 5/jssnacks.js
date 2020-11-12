@@ -1,9 +1,13 @@
 var myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
 
-var index = [prompt(`Inserisci un numero da 0 a ${myArray.length}`), prompt(`Inserisci un numero da 0 a ${myArray.length}`)];
-index = index.sort();
-let firstIndex = index[0];
-let lastIndex = index[1];
+var indexUser = [prompt(`Inserisci un numero da 0 a ${myArray.length-1}`), prompt(`Inserisci un numero da 0 a ${myArray.length}`)];
+indexUser = indexUser.sort();
 
 
-const filteredArray = myArray.filter()
+
+const filteredArray = myArray.filter((element, index) => {
+
+    return index >= indexUser[0] && index <= indexUser[1];
+});
+
+console.log(filteredArray)
