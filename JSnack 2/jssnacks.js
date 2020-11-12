@@ -12,10 +12,11 @@ var bici = [{
     }
 ];
 
-let biciLeggera = bici[0];
+let { peso } = bici[0];
+console.log(peso);
 for (var i = 0; i < bici.length; i++) {
-    if (biciLeggera.peso > bici[i].peso) {
-        biciLeggera = bici[i];
+    if (peso > bici[i].peso) {
+        peso = bici[i].peso;
     }
 }
-console.log(`La bici piu leggera pesa ${biciLeggera.peso}`);
+console.log(`La bici piu leggera pesa ${peso}`);
